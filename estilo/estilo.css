@@ -1,0 +1,165 @@
+/* =========================================================
+   1. Variables (cottagecore)
+   ========================================================= */
+:root {
+  --fondo:        #f7f3ea;   /* beige claro */
+  --superficie:   #fffdf7;   /* blanco cálido */
+  --texto:        #3e3226;   /* marrón oscuro */
+  --verde-oscuro: #47543B;   /* verde profundo */
+  --marron:       #624F32;   /* marrón madera */
+  --marron-claro: #D1C3AD;   /* beige tostado */
+  --borde:        #e0d5c2;
+
+  --radio:  0.625rem;
+}
+
+/* =========================================================
+   2. Reset y base
+   ========================================================= */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+/* =========================================================
+   3. Cabecera
+   ========================================================= */
+body > header {
+  background: var(--superficie);
+  /*hereda de body color*/
+  border-bottom: 0.125rem solid var(--borde);
+  padding: 1.75rem 1rem 1rem;
+  text-align: center;
+}
+
+body > header h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: .02em;
+}
+
+body > header h1 a {
+  color: var(--verde-oscuro);
+  /*hereda de header background-color*/
+  text-decoration: none;
+}
+
+body > header h1 a:hover,
+body > header h1 a:focus {
+  color: var(--marron);
+  /*hereda de header background-color*/
+  text-decoration: underline;
+}
+
+/* =========================================================
+   4. Navegación
+   ========================================================= */
+
+nav a {
+  padding: .35rem .85rem;
+  color: var(--marron);
+  /*hereda de header background-color*/
+  text-decoration: none;
+  border-radius: var(--radio);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--marron-claro);
+  color: var(--texto);
+}
+
+nav a.active {
+  background: var(--verde-oscuro);
+  color: var(--superficie);
+}
+
+/* =========================================================
+   5. Contenido principal
+   ========================================================= */
+main {
+  padding: 2.5rem 1rem 3rem;
+}
+
+main h2 {
+  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+  color: var(--verde-oscuro);
+  /*hereda de main background-color*/
+  border-bottom: 0.125rem solid var(--marron-claro);
+  padding-bottom: .4rem;
+  margin: 0 0 1.75rem;
+}
+
+h3 {
+  color: var(--marron);
+  /*hereda de main background-color*/
+  font-size: 1.2rem;
+  margin: 2rem 0 .75rem;
+}
+
+/* =========================================================
+   6. Listas y enlaces
+   ========================================================= */
+ul, ol {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+li { margin-bottom: .4rem; }
+
+main a {
+  color: var(--marron);
+  /*hereda de main background-color*/
+  text-decoration: underline;
+  text-decoration-color: var(--marron);
+  text-underline-offset: 0.2rem;
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+
+main a:hover,
+main a:focus {
+  color: var(--verde-oscuro);
+  /*hereda de main background-color*/
+  text-decoration-color: var(--verde-oscuro);
+  font-style: italic;
+}
+
+/* =========================================================
+   7. Imágenes y multimedia
+   ========================================================= */
+
+img {
+  height:auto;
+  width: 30%;
+  margin: 0 auto 1.5rem;
+  border-radius: var(--radio);
+}
+
+video {
+  width: 30%;
+  height:auto;
+  margin: 1rem auto;
+  border-radius: var(--radio);
+}
+
+audio {
+  width: 50%;
+  margin: 1rem 0;
+}
+
+/* =========================================================
+   8. Pie de página
+   ========================================================= */
+body > footer {
+  background: var(--verde-oscuro);
+  color: var(--superficie);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+
+

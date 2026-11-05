@@ -1,0 +1,31 @@
+header {
+    display:flex; /*Por defecto: flex-direction: row;*/
+    flex-wrap: wrap; /*Para que los elementos hijo no se salgan del ancho del contenedor (en este caso, header)*/
+    align-items: center; /*Los alinea verticalmente en este caso*/
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:465px){
+    /*Especificidad: 001*/
+    header {
+        flex-direction: column;
+    }
+
+    /*Especificidad: 001*/
+    nav {
+        display:flex;
+        flex-direction: column;
+    }
+
+    main { padding: 1.5rem .75rem 2rem; }
+
+    h3 { margin-top: 1.5rem; }
+
+    img, video {
+        width: 75%;
+    }
+
+    audio {
+        width: 100%;
+    }
+}
